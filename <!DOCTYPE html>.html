@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>随时随瑞</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- 第一部分：图1 + 浮动图2 -->
+  <section class="relative w-full p-0 m-0">
+    <!-- 图1（16:9完整显示） -->
+    <img
+      src="image1.jpg"
+      alt="图1背景图"
+      class="w-full h-auto block"
+    />
+
+    <!-- 图2（浮动在图1上方） -->
+    <img
+      src="image2.png"
+      alt="装饰图2"
+      class="absolute right-4 top-1/2 transform -translate-y-1/2
+             w-64 sm:w-72 md:w-80 lg:w-96
+             transition-transform duration-300 hover:scale-110
+             hidden md:block"
+    />
+
+    <!-- 图2移动端版本（在图1下方显示） -->
+    <div class="block md:hidden text-center mt-10">
+      <img
+        src="image2.png"
+        alt="装饰图2-mobile"
+        class="w-64 sm:w-72 transition-transform duration-300 hover:scale-130 inline-block"
+      />
+    </div>
+  </section>
+
+  <!-- 第二部分：图3（紧接图1，无缝连接） -->
+  <section class="p-0 m-0">
+    <img
+      src="image3.jpg"
+      alt="图3内容"
+      class="w-full h-auto block"
+    />
+  </section>
+
+</body>
+</html>
