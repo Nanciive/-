@@ -1,1 +1,1 @@
-# -
+# Luckin Anywhere, Anytime!!
